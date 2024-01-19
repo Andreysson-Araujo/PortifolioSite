@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: -1;
+}
+
+.wrapper {
+    overflow: scroll;
+}
+
+
+/*HEADER NAV*/
+.conteiner-header {
+    background-color: rgba(0,0,0,0.7);
+    color: #9e3f3f;
+    position: relative; /* Adicione essa linha */
+    z-index: 2; /* Adicione essa linha */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0,0,0,0.7);
+    align-items: center;
+    padding: 10px;
+}
+
+section {
+    max-width: 500px;
+    margin: 0 auto; /* Isso centralizará horizontalmente */
+    position: relative; /* Adicione essa linha */
+    z-index: 1; /* Adicione essa linha */
+}
+
+.logo a {
+    font-family: "Righteous";
+    font-weight: 600;
+    color: #1cdada;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.logo a:hover {
+    color: #FFF;
+}
+
+#nav ul {
+    margin-left: 500px;
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li {
+    margin-right: 20px;
+}
+
+#nav ul li a {
+    font-family: "Righteous";
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+#nav ul li a:hover {
+    color: #1cdada;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    #nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(0,0,0,0.7);
+    }
+
+    #nav ul.show {
+        display: flex;
+    }
+
+    #nav ul li {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .nav-responsive {
+        display: block;
+    }
+    .conteiner-header {
+        background-color: rgba(0,0,0,0.7);
+    }
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    color: #777;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* SECTION INICIO*/
+
+.inicio {
+    margin-top: 50px;
+    background-color: rgba(0,0,0,0.7);
+    color: #FFF;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.conteudo-banner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.conteudo-img img {
+    width: 35%;
+    border-radius: 70%;
+    margin-bottom: 20px;
+}
+
+.conteudo-logo img {
+    width: 13%;
+    border-radius: 70%;
+    margin-top: 15px;
+}
+
+
+/* SOBRE */
+.sobre {
+    color: #4f9e3f;
+    font-size: 1.4rem;
+}
+
+
+/*HABILIDADES */
+.barra-skill {
+    background-color: #ddd;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.barra-skill .barra-skill-php {
+    border-radius: 10px;
+    width: 75%;
+    background-color: #4caf50;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barra-skill span {
+    color: #fff;
+    font-weight: bold;
+}
+
+.barra-skill {
+    background-color: #ddd;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.barra-skill .barra-skill-js {
+    border-radius: 10px;
+    width: 60%;
+    background-color: #4caf50;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.barra-skill .barra-skill-python {
+    border-radius: 10px;
+    width: 60%;
+    background-color: #4caf50;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barra-skill .barra-skill-cob {
+    border-radius: 10px;
+    width: 20%;
+    background-color: #4caf50;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/* footer*/
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+

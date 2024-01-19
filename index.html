@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Andreysson@Dev</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <a href="#">Andrey@Dev</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre min">Sobre</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#Projetos">Projetos</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+        <section id="inicio" class="inicio">
+            <div class="conteudo-banner">
+                <div class="conteudo-img">
+                    <img src="img/perfil.png" alt="icone do usuario">
+                </div>
+                <h1>Andreysson Araujo</h1>
+                <h3>Analista de Sistemas</h3>
+            </div>
+            <div class="conteudo-banner">
+                <h2 class="sobre">Sobre</h2>
+                <p>Estudante de Análise e Desenvolvimento de Sistemas, sempre pronto para novos desafios na área da tecnologia.</p>
+            </div>
+            <div class="conteudo-banner">
+                <h2 class="sobre">Habilidade</h2>
+                    <h3>PHP</h3>
+                    <div class="barra-skill">
+                        <div class="barra-skill-php">
+                            <span>75%</span>
+                        </div>
+                    </div>
+                    <h3>Javascript</h3>
+                    <div class="barra-skill">
+                        <div class="barra-skill-js">
+                            <span>60%</span>
+                        </div>
+                    </div>
+                    <h3>Python</h3>
+                    <div class="barra-skill">
+                        <div class="barra-skill-python">
+                            <span>60%</span>
+                        </div>
+                    </div>
+                    <h3>COBOL</h3>
+                    <div class="barra-skill">
+                        <div class="barra-skill-cob">
+                            <span>20%</span>
+                        </div>
+                    </div>
+            </div>
+            <div class="conteudo-logo">
+                <a class="gitLogo"href=""><img  src="img/githubLogo.png" alt="logo gitihub"></a>
+            </div>
+        </section>
+    </div>
+    
+    <canvas id="canvas"></canvas>
+    <footer>
+        <div class="redes">
+            &copy; Andreysson@Dev
+        </div>
+    </footer>
+    
+    <script type="text/javascript">
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight + 500; // Ajuste aqui para garantir espaço abaixo da barra de rolagem
+
+        var texts = "0100100011001000010101100".split("");
+        var fontSize = 16;
+        var columns = canvas.width / fontSize;
+        var drops = [];
+
+        for (var x = 0; x < columns; x++) {
+            drops[x] = 1;
+        }
+
+        function draw() {
+            ctx.fillStyle = "rgba(0,0,0,0.05)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "#0F0";
+            ctx.font = fontSize + "px arial";
+            for (var i = 0; i < drops.length; i++) {
+                var text = texts[Math.floor(Math.random() * texts.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height || Math.random() > 0.95) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 33);
+    </script>
+    
+</body>
+</html>
